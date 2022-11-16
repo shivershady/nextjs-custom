@@ -23,7 +23,7 @@ function Home() {
 
   return (
     <>
-      {isLoading && <div>Loading.....</div>}
+      {isLoading && <div>Loading.....haha</div>}
       {(data || []).map((item) => {
         return <>
           <h6 className='font-bold'>title:</h6>
