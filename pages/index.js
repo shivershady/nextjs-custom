@@ -23,15 +23,22 @@ function Home() {
 
   return (
     <>
-      {isLoading && <div>Loading...</div>}
-      {(data || []).map((item) =>
-        <>
+      {isLoading && <div>Loading.....haha</div>}
+      {(data || []).map((item) => {
+        return <>
           <h6 className='font-bold'>title:</h6>
           <div>
             {item.title}
           </div>
+<<<<<<< HEAD
         </>
       )}
+=======
+        </>;
+      }
+      )
+      }
+>>>>>>> 3e3fb7e4196e40613a9d39e8dbfacc734dbc035a
     </>
   );
 }
