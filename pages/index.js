@@ -31,8 +31,7 @@ function Home() {
             {item.title}
           </div>
         </>
-      )
-      }
+      )}
     </>
   );
 }
