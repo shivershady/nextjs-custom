@@ -1,5 +1,10 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
+import CheckBox from '../components/Customs/CheckBox';
+import Dropdown from '../components/Customs/Dropdown';
+import Modal from '../components/Customs/Modal';
+import TabList from '../components/Customs/TabList';
+import Toggle from '../components/Customs/Toggle';
 import DocsLayout from '../layouts/DocsLayout';
 import homeService from '../services/homeService';
 function Home() {
@@ -23,22 +28,20 @@ function Home() {
 
   return (
     <>
-      {isLoading && <div>Loading.....haha</div>}
-      {(data || []).map((item) => {
-        return <>
+      {isLoading && <div>Loading.....</div>}
+      {/* {(data || []).map((item) =>
+        <>
           <h6 className='font-bold'>title:</h6>
           <div>
             {item.title}
           </div>
-<<<<<<< HEAD
         </>
-      )}
-=======
-        </>;
-      }
-      )
-      }
->>>>>>> 3e3fb7e4196e40613a9d39e8dbfacc734dbc035a
+      )} */}
+      <CheckBox />
+      <Dropdown />
+      {/* <Modal /> */}
+      <Toggle />
+      <TabList />
     </>
   );
 }

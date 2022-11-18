@@ -35,24 +35,23 @@ function getInstance() {
       return response;
     },
     (error) => {
-      console.log(error);
       const status = error.response.status;
       switch (status) {
         case 400:
           alert(
-            "Bad Request. cú pháp yêu cầu không đúng định dạng, khung thông báo yêu cầu không hợp lệ hoặc định tuyến yêu cầu lừa đảo"
+            "400 Bad Request. cú pháp yêu cầu không đúng định dạng, khung thông báo yêu cầu không hợp lệ hoặc định tuyến yêu cầu lừa đảo"
           );
           break;
         case 401:
           alert(
-            "Unauthorized . the client phải tự xác thực để nhận được phản hồi được yêu cầu"
+            "401 Unauthorized . the client phải tự xác thực để nhận được phản hồi được yêu cầu"
           );
           break;
         case 403:
-          alert("Forbidden.Khách hàng không có quyền truy cập vào nội dung");
+          alert("403 Forbidden.Khách hàng không có quyền truy cập vào nội dung");
           break;
         case 404:
-          alert("Not Found.Máy chủ không thể tìm thấy tài nguyên được yêu cầu");
+          alert("404 Not Found.Máy chủ không thể tìm thấy tài nguyên được yêu cầu");
           break;
         default:
           break;
